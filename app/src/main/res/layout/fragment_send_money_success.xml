@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:padding="20dp"
+    tools:context=".SendMoneyConfirmation">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/success_img"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_success"
+        app:layout_constraintBottom_toTopOf="@+id/disclaimer_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/success_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:maxWidth="180sp"
+        android:textColor="@color/light_grey"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/success_img" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/disclaimer_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:gravity="center_horizontal"
+        android:text="@string/disclaimer_success_text"
+        android:textColor="@color/hint_color"
+        app:layout_constraintBottom_toTopOf="@+id/dash_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dash_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/material_button_color"
+        android:padding="18dp"
+        android:text="Go to dashboard"
+        android:textAllCaps="false"
+        android:textColor="@color/button_text_color"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,17 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="mamo_primary_blue">#3333FF</color>
+    <color name="text_color_grey">#292A2E</color>
+    <color name="snowy_blue">#D1DCF8</color>
+    <color name="titan_white">#F2F1FD</color>
+    <color name="button_color">#E9EFFF</color>
+    <color name="primary_color">#3333FF</color>
+    <color name="dashboard_user_name_color">#292A2E</color>
+    <color name="dashboard_transaction_type_color">#DFE2E9</color>
+    <color name="light_grey">#757F8D</color>
+    <color name="theme_grey">#DFE2E9</color>
+    <color name="hint_color">#C7D1DC</color>
+    <color name="fragment_background">#F3F5F9</color>
+
 </resources>

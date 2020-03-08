@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".WelcomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/splash_screen_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mamo_primary_blue"
+        android:elevation="5dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/welcome_page_mamo_pay_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_mamo_logo_vector"></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/welcome_page_mamo_pay_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/text_mamo_pay"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatTextView>
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:overScrollMode="never" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tab_view_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/placeholder_tab_view"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/indicator_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_view_placeholder"
+        app:tabBackground="@drawable/table_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabPaddingEnd="16dp"
+        app:tabPaddingStart="16dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="10dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/google_login_btn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:maxWidth="800dp"
+            android:minHeight="60dp"
+            android:text="@string/continue_google"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_color"
+            android:textSize="15sp"
+            app:backgroundTint="@color/snowy_blue"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/ic_icons_google"
+            app:iconGravity="textStart"
+            app:iconTint="@null"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/google_login_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="20sp"
+            android:minHeight="60sp"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_color"
+            android:textSize="15sp"
+            app:backgroundTint="@color/snowy_blue"
+            app:cornerRadius="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/sign_up_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@id/google_login_btn"
+            app:layout_constraintStart_toStartOf="@id/google_login_btn"
+            app:layout_constraintTop_toBottomOf="@+id/google_login_btn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_up_btn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:minHeight="60dp"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_color"
+            android:textSize="15dp"
+            app:backgroundTint="@color/snowy_blue"
+            app:cornerRadius="25dp"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="@id/google_login_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintRight_toRightOf="@id/google_login_btn"
+            app:layout_constraintStart_toEndOf="@+id/login_btn"
+            app:layout_constraintTop_toTopOf="@id/login_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

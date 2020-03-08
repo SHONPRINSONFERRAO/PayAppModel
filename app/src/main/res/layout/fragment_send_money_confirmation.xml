@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:padding="20dp"
+    tools:context=".SendMoneyConfirmation">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_money_to"
+        android:textColor="@color/light_grey"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_header">
+        <!--android:tint="@color/primary_color"-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/user_image"
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_man"></androidx.appcompat.widget.AppCompatImageView>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/user_logo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/white"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp"
+        app:layout_constraintRight_toRightOf="@+id/image_view"
+        app:layout_constraintTop_toTopOf="@+id/image_view">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mamo_pay_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:padding="2dp"
+            android:src="@drawable/ic_mamo_small"></androidx.appcompat.widget.AppCompatImageView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:text="@string/user_name"
+        android:textColor="@color/text_color_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image_view"
+        app:layout_constraintLeft_toRightOf="@id/image_view"
+        app:layout_constraintTop_toTopOf="@id/image_view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/phone_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:text="@string/phone_number_text"
+        android:textColor="@color/light_grey"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/phone_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="@string/phone_number"
+        android:textColor="@color/text_color_grey"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_header" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/amount_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:text="@string/amount_credited"
+        android:textColor="@color/light_grey"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:textColor="@color/text_color_grey"
+        android:textSize="45sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_header" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/disclaimer_tet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/disclaimer_text"
+        android:textColor="@color/hint_color"
+        app:layout_constraintBottom_toTopOf="@+id/send_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/material_button_color"
+        android:padding="18dp"
+        android:text="Send"
+        android:textAllCaps="false"
+        android:textColor="@color/button_text_color"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
